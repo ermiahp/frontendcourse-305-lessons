@@ -1,0 +1,50 @@
+body {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+header {
+    margin-top: 42px;
+}
+
+.header__logo {
+    width: 25%;
+    float: left;
+}
+
+.header__menue {
+    width: 60%;
+    float: right;
+}
+
+.menue__links{
+    float: left;
+}
+
+.menue__links li {
+    display: inline;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.menue__btns {
+    float: right;
+}
+
+.menue__btn {
+    height: 45px;
+    width: 110px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-succes {
+    border: 1px solid #BCD0E5;
+    color: #173A56;
+}
+
+.btn-alert {
+    background-color: #FF9900;
+    color: white;
+}
