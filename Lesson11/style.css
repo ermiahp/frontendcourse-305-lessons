@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+
+.dating {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./imgs/bg.png');
+    background-size: cover;
+    position: relative;
+}
+
+.dating__bg-top{
+    background-image: url('./imgs/top.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 450px;
+    width: 60%;
+    right: 0;
+}
+
+.dating__bg-bottom{
+    background-image: url('./imgs/bottom.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 350px;
+    width: 50%;
+    bottom: 0;
+}
