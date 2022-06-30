@@ -39,7 +39,7 @@ body{
 
 .life-changer__explain {
     width: 40%;
-    height: 40vh;
+    height: 50%;
     display: flex;
     flex-direction: column;
     margin-left: 10%;
