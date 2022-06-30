@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+
+.life-changer {
+    width: 100vw;
+    height: 80vh;
+    padding-top: 50px;
+    background-image: url('./imgs/girl.svg'), url('./imgs/blue.svg');
+    background-position: 85% 0, right -100px;
+    background-repeat: no-repeat , no-repeat;
+    background-size: 65% , contain;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.life-changer__nav {
+    height: 60px;
+    width: 100%;
+    padding-left: 5%;
+    align-self: flex-start;
+}
+
+.life-changer__nav-content {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.life-changer__apps {
+    width: 160px;
+    height: 100%;
+    border: 1px solid #E6E6E6;
+    border-radius: 16px;
+    display: flex;
+}
+
+.life-changer__explain {
+    width: 40%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    align-self:center;
+}
