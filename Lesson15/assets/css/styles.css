@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+body {
+  margin: 0;
+}
+
+.shield h1 {
+  font-size: 48px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+}
+.shield-btn {
+  background-color: #0098FF;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=styles.css.map */

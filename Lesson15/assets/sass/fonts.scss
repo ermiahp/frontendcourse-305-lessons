@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+$h1-size: 48px;
+$h2-size: 40px; 
+
+@mixin header1 {
+    font-size: $h1-size;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 55px;
+}

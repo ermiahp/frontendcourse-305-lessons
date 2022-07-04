@@ -1,0 +1,16 @@
+@import './constants.scss';
+
+body{
+    margin: 0;
+}
+
+.shield {
+    & h1 {
+        @include header1;
+    }
+
+    &-btn {
+        background-color: $secondry;
+        color: $white;
+    }
+}
