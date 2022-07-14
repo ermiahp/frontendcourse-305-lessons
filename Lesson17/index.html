@@ -6,8 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styles/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <header class="token-header">
+        <img src="./assets/imgs/logo.svg" height="30px"/>
+        <ul class="mobile-off token-header__list">
+            <li>Our team</li>
+            <li>Our team</li>
+            <li>Our team</li>
+            <li>Our team</li>
+        </ul>
+        <div class="mobile-off">
+            <button>Login</button>
+            <button>Signup</button>
+        </div>
+        <span class="mobile-on material-symbols-outlined" onclick="openMenue()">
+            menu
+        </span>
+        <span class="mobile-off material-symbols-outlined close" onclick="closeMenue()">
+            close
+        </span>
+    </header>
     <div class="token-main">
         <div class="token-main__stats">
             <h2>Tknrs Tokenomics and Token Distribution</h2>
@@ -23,5 +43,21 @@
             <div></div>
         </div>
     </div>
+
+    <script>
+        function openMenue() {
+            let close = document.getElementsByClassName('close')[0];
+            close.className = "mobile-on material-symbols-outlined close";
+            let menus = document.getElementsByClassName('token-header__list')[0];
+            menus.className = "token-header__list"
+        }
+
+        function closeMenue() {
+            let close = document.getElementsByClassName('close')[0];
+            close.className = "mobile-off material-symbols-outlined close";
+            let menus = document.getElementsByClassName('token-header__list')[0];
+            menus.className = "mobile-off token-header__list"
+        }
+    </script>
 </body>
 </html>

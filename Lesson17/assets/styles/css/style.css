@@ -4,11 +4,52 @@ body {
   width: 100vw;
 }
 
+.token-header {
+  height: 8%;
+  background-color: #0f1320;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 3%;
+}
+.token-header .close {
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  z-index: 11;
+}
+.token-header span {
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+}
+.token-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  width: 70%;
+  margin: 0;
+}
+.token-header__list li {
+  list-style: none;
+  margin-right: 2%;
+  cursor: pointer;
+}
 .token-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   height: 100%;
   background-color: #0f1320;
   color: white;
@@ -55,7 +96,37 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
 }
+.mobile-on {
+  display: none !important;
+}
+
 @media screen and (max-width: 500px) {
+  .token-header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .token-header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: #0f1320;
+    height: 15vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .token-header__list li {
+    list-style: disc;
+  }
   .token-main {
     padding: 5%;
   }
@@ -80,6 +151,12 @@ body {
   .token-main__stats div span {
     font-size: 66px;
     padding: 3% 0;
+  }
+  .mobile-on {
+    display: block !important;
+  }
+  .mobile-off {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
