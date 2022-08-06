@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Century";
+  src: url("../fonts/Century Gothic.ttf") format("ttf");
+}
+body {
+  margin: 0;
+  background-color: #0F1320;
+  height: 200vh;
+  width: calc(100vw - 20%);
+  padding: 0 10%;
+  font-family: "Century";
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  opacity: 0.5;
+}
+
+.team {
+  width: 100%;
+  color: white;
+}
+.team__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+.team__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.team__arrows span {
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid hsla(0deg, 0%, 100%, 0.1);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+.team__arrows span:hover {
+  border: 2px solid hsla(0deg, 0%, 100%, 0.5);
+}
+.team h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  /* identical to box height, or 117% */
+  color: white;
+  letter-spacing: -0.02em;
+}
+.team-members {
+  height: 560px;
+  width: 100%;
+}
+.team-member {
+  height: 520px;
+  padding: 40px;
+  padding-bottom: 0;
+  background-color: #0D0B16;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.team-member:hover {
+  -webkit-box-shadow: 0 3px 9px rgba(255, 255, 255, 0.12), 0 3px 6px rgba(255, 255, 255, 0.24);
+          box-shadow: 0 3px 9px rgba(255, 255, 255, 0.12), 0 3px 6px rgba(255, 255, 255, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.team-member h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.team-member p {
+  margin: 0;
+  font-style: normal;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.team-member img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 430px) {
+  .team__arrows {
+    display: none;
+  }
+  .team-members {
+    height: unset;
+  }
+}
+/*# sourceMappingURL=style.css.map */
