@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #posts {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .post {
+            min-height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: aliceblue;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .post__detail {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="posts">
+        </div>
+    </div>
+    <script>
+        const API = 'https://jsonplaceholder.typicode.com'; 
+
+        const postsElemnt = document.querySelector('#posts');
+
+        // console.log(typeof postsElemnt);
+        let page = 8; // 0 - 9
+        const getUsers = async () => {
+            let users = await fetch(`${API}/users`);
+            return await users.json()
+        };
+        const getPosts = async () => {
+            let posts = await fetch(`${API}/posts`);
+            return await posts.json();
+        };
+
+        Promise.all([getUsers(), getPosts()])
+            .then(values => {
+                let users = values[0];
+                let posts = values[1];
+                for (let index = 0 + page * 10; index < 10 + page * 10; index++) {
+                    const element = posts[index];
+                    let post = document.createElement('div');
+                    post.classList += 'post';
+
+                    let postDetail = document.createElement('div');
+                    let postUser = document.createElement('div');
+                    postDetail.classList += 'post__detail';
+                    postUser.classList += 'post__user';
+
+                    let postTitle = document.createElement('h2');
+                    let postText = document.createElement('p');
+
+                    postTitle.innerText = element.title;
+                    postText.innerText = element.body;
+                    
+                    postDetail.appendChild(postTitle);
+                    postDetail.appendChild(postText);
+
+                    let postUsername = document.createElement('h2');
+                    let postCompany = document.createElement('span');
+                    let user = users.find(user => user.id === element.userId);
+                    postUsername.innerText = user.username;
+                    postCompany.innerText =user.company.name;
+
+                    postUser.appendChild(postUsername);
+                    postUser.appendChild(postCompany);
+
+                    post.appendChild(postDetail);
+                    post.appendChild(postUser);
+                    
+                    // console.log(post);
+                    postsElemnt.appendChild(post);
+                }
+                console.log(values);
+            })
+        // fetch(`${API}/posts`)
+        //     .then(response => response.json())
+        //     .then(posts => {
+        //         console.log(users);
+
+        //     })
+        //     .catch(error => console.error(error));
+    </script>
+</body>
+</html>
