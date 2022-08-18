@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Icon from '@mui/material/Icon';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
 
 import './Todo.css';
+import TodoList from '../TodoList/TodoList';
 
 const Todo = () => {
     const [todos, setTodos] = useState([]);
@@ -15,6 +12,7 @@ const Todo = () => {
 
     const addTodo = () => {
         setTodos([...todos, {value: todo, checked: false}]);
+        setTodo('');
     }
 
     const handleToggle = (index) => {
@@ -33,7 +31,7 @@ const Todo = () => {
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <div  style={{display: 'flex', alignItems: 'center'}}>
                 <TextField  onChange={(event) => setTodo(event.target.value)}
-                label="Outlined" variant="outlined" />
+                label="Outlined" variant="outlined" value={todo}/>
                 <Icon 
                     style={{cursor: 'pointer'}} 
                     color="primary" 
@@ -43,27 +41,7 @@ const Todo = () => {
             <List dense component="div" role="list" className="lists">
                 {todos.map((tempTodo, index) => {
                     return(
-                        <ListItem
-                        key={index}
-                        role="listitem"
-                        button
-                        >
-                            <ListItemIcon>
-                                <Checkbox
-                                checked={tempTodo.checked}
-                                tabIndex={-1}
-                                disableRipple
-                                onClick={() => handleToggle(index)}
-                                />
-                                
-                            </ListItemIcon>
-                            <ListItemText primary={tempTodo.value} style={{color: 'black'}}/>
-                            <Icon 
-                                style={{cursor: 'pointer'}} 
-                                color="error"
-                                onClick={() => removeTodo(index)}
-                            >delete</Icon>
-                        </ListItem>
+                        <TodoList index={index} todo={tempTodo} handleToggle={handleToggle} removeTodo={removeTodo}/>
                     )
                 })}
             </List>
