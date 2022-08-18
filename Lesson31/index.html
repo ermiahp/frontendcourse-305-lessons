@@ -37,7 +37,7 @@
         const postsElemnt = document.querySelector('#posts');
 
         // console.log(typeof postsElemnt);
-        let page = 8; // 0 - 9
+        let page = 7; // 0 - 9
         const getUsers = async () => {
             let users = await fetch(`${API}/users`);
             return await users.json()
@@ -87,13 +87,6 @@
                 }
                 console.log(values);
             })
-        // fetch(`${API}/posts`)
-        //     .then(response => response.json())
-        //     .then(posts => {
-        //         console.log(users);
-
-        //     })
-        //     .catch(error => console.error(error));
     </script>
 </body>
 </html>
