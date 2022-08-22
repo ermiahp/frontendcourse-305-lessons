@@ -41,7 +41,12 @@ const Todo = () => {
             <List dense component="div" role="list" className="lists">
                 {todos.map((tempTodo, index) => {
                     return(
-                        <TodoList index={index} todo={tempTodo} handleToggle={handleToggle} removeTodo={removeTodo}/>
+                        <TodoList 
+                            index={index} 
+                            todo={tempTodo} 
+                            handleToggle={handleToggle} 
+                            removeTodo={removeTodo}
+                        />
                     )
                 })}
             </List>
